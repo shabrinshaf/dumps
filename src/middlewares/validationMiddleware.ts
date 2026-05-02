@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { z, ZodError } from 'zod';
 
-// Kita pakai z.ZodSchema supaya lebih fleksibel dan tidak error TS2724
+// Pakai z.ZodSchema supaya lebih fleksibel dan tidak error TS2724
 export const validate = (schema: z.ZodSchema) => {
   return (req: Request, res: Response, next: NextFunction) => {
     try {
